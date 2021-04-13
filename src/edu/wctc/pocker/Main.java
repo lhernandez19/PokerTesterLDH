@@ -22,5 +22,6 @@ public class Main {
 
         System.out.println(poker.isStraight(hand));
         System.out.println(poker.isStraightFlush(hand));
+        System.out.println(poker.isFourOfAKind(hand));
     }
 }

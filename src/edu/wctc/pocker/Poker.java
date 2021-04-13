@@ -32,4 +32,18 @@ public class Poker {
         }
         return isTheHand;
     }
+
+    public boolean isFourOfAKind(List<Card> hand){
+        boolean isTheHand = true;
+        int prevScore = 0;
+        int score = 0;
+        for (int i=0;i<4;i++) {
+            Card card = hand.get(i);
+            score = card.getScore();
+            if ((score == prevScore) && (i != 0)) isTheHand = false;
+            prevScore = score;
+        }
+        return isTheHand;
+    }
+
 }
